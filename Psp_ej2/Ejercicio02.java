@@ -24,9 +24,8 @@ public class Ejercicio02 {
 		System.out.println(runnerName + "arrived to the finish line.");
 	}
 }
-	public class MultiThreadRunners {
 
-	        public static void main(String[] args) {
+public static void main(String[] args) {
 	        
 	    Runners runner1 = new Runners("Luis M.", 3);
 	    Runners runner2 = new Runners("Mario S.", 3); 
@@ -43,4 +42,4 @@ public class Ejercicio02 {
 	    System.out.println("All Runners are running...");
 	}
 }
-}
+
