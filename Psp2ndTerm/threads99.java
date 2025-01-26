@@ -6,6 +6,7 @@
 		static class Runners implements Runnable {
 			private String runnerName;
 			private int recordTime;
+			static int counter = 0;
 		
 		public Runners (String runnerName, int recordTime) {
 			this.runnerName = runnerName;
@@ -15,6 +16,8 @@
 		public void run() {
 			
 			System.out.println(runnerName + "started running.");
+			counter++;
+			System.out.println("Thread number"+ counter);
 			try {
 				Thread.sleep(recordTime*1000L);
 			}catch (InterruptedException e){
@@ -30,10 +33,12 @@
 		        
 		    Runners runner1 = new Runners("Luis M.", 3);
 		 
+		 
 		    for (int i = 0; i < 99; i++) {
 	            Thread thread = new Thread(runner1); 
 	            thread.start(); 
 	            System.out.println("Runner " + runner1 + " is running...");
+	            
 		    }
 		}
     }
